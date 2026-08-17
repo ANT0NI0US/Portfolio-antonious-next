@@ -24,6 +24,16 @@ export default function Accordion() {
             {/* Header */}
             <button
               onClick={() => toggleItem(index)}
+              aria-label={
+                isOpen
+                  ? `Hide the answer about ${item.title}`
+                  : "Show the answer about ${item.title}"
+              }
+              title={
+                isOpen
+                  ? `Hide the answer about ${item.title}`
+                  : "Show the answer about ${item.title}"
+              }
               className="flex w-full items-center justify-between gap-2 py-2 transition-colors"
             >
               <h3 className="font-head font-fancy w-[90%] text-start font-medium wrap-break-word sm:text-xl md:text-2xl">

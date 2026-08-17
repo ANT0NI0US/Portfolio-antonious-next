@@ -1,6 +1,7 @@
 import { CloseIcon, LeftArrowIcon } from "@/icons";
 import { ProjectImage } from "@/data/projects";
 import { Dispatch, SetStateAction } from "react";
+import Image from "next/image";
 
 interface ProjectImageModalProps {
   images: ProjectImage[];
@@ -30,12 +31,12 @@ export default function ProjectImageModal({
   if (!isOpen) return null;
 
   return (
-    <div className="bg-main/80 fixed inset-0 z-[99999999999] flex items-center justify-center px-4">
+    <div className="bg-main/80 fixed inset-0 z-99999999999 flex items-center justify-center px-4">
       {/* Close Button */}
       <button
         onClick={closeModal}
         className="absolute top-4 right-4 flex items-center justify-center rounded-full p-1"
-        aria-label="Close"
+        aria-label="Close project image modal"
         title="Close"
       >
         <CloseIcon className="size-8" />
@@ -53,11 +54,13 @@ export default function ProjectImageModal({
 
       <div className="flex flex-col gap-1.5">
         {/* Image */}
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img
+        <Image
+          width={1600}
+          height={1000}
+          sizes="90vw"
           src={images[selectedIndex].src}
           alt={images[selectedIndex].alt}
-          className="max-h-[90vh] max-w-full rounded-md object-contain"
+          className="h-auto max-h-[90vh] w-auto max-w-full rounded-md object-contain"
         />
         <p className="text-center text-xl font-bold">
           {images[selectedIndex].alt}

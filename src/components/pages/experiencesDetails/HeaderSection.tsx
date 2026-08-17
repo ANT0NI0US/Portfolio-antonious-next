@@ -1,5 +1,6 @@
 import { ExperienceData } from "@/data/experiences";
 import { CalendarIcon, LocationIcon } from "@/icons";
+import Image from "next/image";
 
 const META_BADGE =
   "flex items-center gap-1.5 rounded-full border border-white/10 bg-white/5 px-3 py-1.5 text-xs text-light/80 backdrop-blur-sm";
@@ -23,14 +24,17 @@ export default function HeaderSection({ experience }: HeaderSectionProps) {
     <section className="from-main via-secondary/80 to-main bg-linear-to-t py-5 sm:py-10">
       <div className="container flex flex-col gap-4">
         <div className="flex flex-col-reverse items-center gap-4 sm:flex-row">
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
-            src={companyLogo}
-            alt={title}
-            loading="eager"
-            decoding="async"
-            className="size-20 rounded-full"
-          />
+          <div className="relative size-20">
+            <Image
+              fill
+              sizes="80px"
+              src={companyLogo}
+              alt={title}
+              loading="eager"
+              decoding="async"
+              className="rounded-full object-cover"
+            />
+          </div>
           <h2 className="text-center text-2xl font-semibold sm:text-3xl">
             {jobTitle}
           </h2>

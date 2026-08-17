@@ -141,6 +141,15 @@
     font-family: "Montserrat", sans-serif;
     scroll-behavior: smooth;
   }
+
+  /* react-multi-carousel marks off-screen slides aria-hidden="true" but
+     leaves their links/buttons focusable, which fails the WCAG rule that
+     aria-hidden elements must not contain focusable descendants. Hiding
+     those descendants from layout removes them from the tab order too. */
+  [aria-hidden="true"] a,
+  [aria-hidden="true"] button {
+    visibility: hidden;
+  }
 }
 
 @utility input {

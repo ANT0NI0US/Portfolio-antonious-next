@@ -99,7 +99,7 @@ function Window({ children, name }: WindowProps) {
             <div className="bg-main relative z-50 max-h-[90vh] w-[90%] rounded-md shadow-md sm:max-h-[80vh] md:w-187.5">
               <Button
                 variation="delete"
-                aria_label="Close-modal"
+                aria_label="Close modal"
                 onClick={close}
                 font="absolute! top-[10px] right-[10px] w-[30px]! h-[30px]! p-2!"
               >

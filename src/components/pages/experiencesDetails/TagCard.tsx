@@ -9,10 +9,10 @@ interface TagCardProps {
 export default function TagCard({ configKey, items }: TagCardProps) {
   const config = TAG_CONFIGS[configKey];
   return (
-    <div className="from-secondary/50 to-secondary/20 flex h-full flex-col gap-4 border border-white/5 bg-gradient-to-br p-5">
+    <div className="from-secondary/50 to-secondary/20 flex h-full flex-col gap-4 border border-white/5 bg-linear-to-br p-5">
       <div>
         <span
-          className={`text-light/40 mb-0.5 block text-[10px] font-semibold tracking-widest uppercase`}
+          className={`text-light/55 mb-0.5 block text-[10px] font-semibold tracking-widest uppercase`}
         >
           {config.label}
         </span>

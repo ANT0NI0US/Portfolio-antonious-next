@@ -14,7 +14,7 @@ const styles = {
   primary: "bg-primary text-secondary border-primary border",
   secondary: "bg-transparent text-light border-primary border",
   delete: "bg-error text-light",
-  danger: "bg-light text-error",
+  danger: "bg-light text-main",
 };
 
 interface ButtonProps {

@@ -3,9 +3,13 @@
 import { allTestimonials } from "@/data/allTestimonials";
 import { carouselResponsive } from "@/data/carouselResponsive";
 import { QuoteIcon } from "@/icons";
-import Carousel from "react-multi-carousel";
+import dynamic from "next/dynamic";
 import "react-multi-carousel/lib/styles.css";
 import TestimonialsDetailsModal from "./TestimonialsDetailsModal";
+
+const Carousel = dynamic(() => import("react-multi-carousel"), {
+  ssr: false,
+});
 
 const getShortDescription = (text: string, maxLength = 150) => {
   return text.length > maxLength

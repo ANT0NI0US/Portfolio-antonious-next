@@ -20,25 +20,25 @@ export default function ServiceBody({ title, description }: ServiceBodyProps) {
       <div>
         <span className="text-light/50">function</span>{" "}
         <span className="text-primary">{toCamel(title)}</span>
-        <span className="text-light/40">() {"{"}</span>
+        <span className="text-light/55">() {"{"}</span>
       </div>
 
-      <div className="text-light/40 pl-4">return (</div>
+      <div className="text-light/55 pl-4">return (</div>
       <p className="pl-7 font-sans text-[13px] leading-[1.9]">
         <span className="font-mono">
-          <span className="text-light/40">&lt;</span>
+          <span className="text-light/55">&lt;</span>
           <span className="text-primary/70">p</span>
-          <span className="text-light/40">&gt;</span>
+          <span className="text-light/55">&gt;</span>
         </span>
         <span className="text-light/75">{description}</span>
         <span className="font-mono">
-          <span className="text-light/40">&lt;/</span>
+          <span className="text-light/55">&lt;/</span>
           <span className="text-primary/70">p</span>
-          <span className="text-light/40">&gt;</span>
+          <span className="text-light/55">&gt;</span>
         </span>
       </p>
-      <div className="text-light/40 pl-4">);</div>
-      <div className="text-light/40">{"}"}</div>
+      <div className="text-light/55 pl-4">);</div>
+      <div className="text-light/55">{"}"}</div>
     </div>
   );
 }

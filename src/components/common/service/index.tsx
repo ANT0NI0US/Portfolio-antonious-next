@@ -30,7 +30,7 @@ export default function Service({
       </div>
 
       {/* GUTTER — LINE NUMBERS */}
-      <div className="text-primary/40 group-hover:text-primary/70 mt-6 flex flex-col items-end gap-0.5 px-2.5 py-4 font-mono text-[11px] transition-colors duration-300">
+      <div className="text-primary/65 group-hover:text-primary/95 mt-6 flex flex-col items-end gap-0.5 px-2.5 py-4 font-mono text-[11px] transition-colors duration-300">
         {Array.from({ length: lines }, (_, i) => (
           <span key={i}>{String(i + 1).padStart(2, "0")}</span>
         ))}

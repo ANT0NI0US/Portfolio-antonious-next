@@ -67,7 +67,7 @@ export default function Contact() {
               width={600}
               height={600}
               sizes="(min-width: 1024px) 60vw, 100vw"
-              className="object-cover"
+              className="h-auto w-full object-cover"
             />
           </div>
 

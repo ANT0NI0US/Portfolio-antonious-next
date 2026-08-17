@@ -27,7 +27,7 @@ export default function SkillDetails({ skill, index }: SkillDetailsProps) {
     >
       <SkillTitle title={title} />
       <SkillDescription description={description} />
-      <span className="text-light/40 font-mono text-sm xl:text-base">],</span>
+      <span className="text-light/55 font-mono text-sm xl:text-base">],</span>
     </motion.div>
   );
 }

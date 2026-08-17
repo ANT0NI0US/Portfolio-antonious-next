@@ -25,7 +25,7 @@ export default function SkillDetails({ skill }: SkillDetailsProps) {
     >
       <div className="group-hover:animate-rotate bg-primary absolute h-[200%] w-25" />
       <div className="bg-main absolute inset-1 z-10 flex flex-col items-center justify-center gap-2 rounded-md px-3 py-4 text-center shadow-md">
-        <span className="text-light/30 self-start font-mono text-[11px]">
+        <span className="text-light/55 self-start font-mono text-[11px]">
           {"/**"}
         </span>
         <Icon className="size-14 xl:size-16" />
@@ -34,7 +34,7 @@ export default function SkillDetails({ skill }: SkillDetailsProps) {
         </h3>
         <p>{description}</p>
 
-        <span className="text-light/30 self-end font-mono text-[11px]">
+        <span className="text-light/55 self-end font-mono text-[11px]">
           {"*/"}
         </span>
       </div>

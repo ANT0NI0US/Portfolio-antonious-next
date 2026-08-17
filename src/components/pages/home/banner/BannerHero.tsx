@@ -10,11 +10,11 @@ export default function BannerHero() {
       </h1>
 
       <p className="text-light/70 mt-2 flex items-center justify-center gap-1 font-mono text-base sm:text-xl lg:text-xl xl:text-2xl 2xl:text-3xl">
-        <span className="text-light/40">&gt;</span>
+        <span className="text-light/55">&gt;</span>
         const dev
-        <span className="text-light/40">=</span>
+        <span className="text-light/55">=</span>
         <span className="text-primary">&quot;Antonious Nasr&quot;</span>
-        <span className="text-light/40">;</span>
+        <span className="text-light/55">;</span>
         <CursorPulse className="h-7" />
       </p>
     </>

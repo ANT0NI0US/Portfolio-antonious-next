@@ -1,4 +1,5 @@
 import SectionDetailsHead from "@/components/common/SectionDetailsHead";
+import Image from "next/image";
 
 export interface ToolkitItem {
   src: string;
@@ -40,14 +41,17 @@ export default function Technologies({
               title={`Learn more about ${el.alt}`}
               className="hover:bg-primary/10 hover:border-primary/50 bg-light/5 border-primary/20 flex w-fit cursor-pointer items-center gap-1.5 rounded-full border px-4 py-1.5 transition-colors duration-300"
             >
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
-                loading="lazy"
-                title={el.alt}
-                src={el.src}
-                alt={el.alt}
-                className="size-6 object-contain object-center"
-              />
+              <div className="relative size-6">
+                <Image
+                  fill
+                  sizes="24px"
+                  loading="lazy"
+                  title={el.alt}
+                  src={el.src}
+                  alt={el.alt}
+                  className="object-contain object-center"
+                />
+              </div>
               <span className="text-light/80 text-xs font-medium whitespace-nowrap">
                 {el.alt}
               </span>

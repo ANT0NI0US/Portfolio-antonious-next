@@ -19,7 +19,7 @@ export default function Breadcrumbs({ items }: BreadcrumbsProps) {
         const isLast = index === items.length - 1;
         return (
           <span key={item.label} className="flex items-center gap-2">
-            {index > 0 && <span className="text-light/20">/</span>}
+            {index > 0 && <span className="text-light/55">/</span>}
             {isLast || !item.path ? (
               <span className="text-primary" aria-current="page">
                 {item.label}
@@ -29,7 +29,7 @@ export default function Breadcrumbs({ items }: BreadcrumbsProps) {
                 href={item.path}
                 aria-label={`Go to ${item.label}`}
                 title={`Go to ${item.label}`}
-                className="text-light/45 hover:text-light transition-colors"
+                className="text-light/55 hover:text-light transition-colors"
               >
                 {item.label}
               </Link>

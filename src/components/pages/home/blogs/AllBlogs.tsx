@@ -3,9 +3,13 @@
 import Button from "@/components/ui/Button";
 import { blogs } from "@/data/blogs";
 import { carouselResponsive } from "@/data/carouselResponsive";
+import dynamic from "next/dynamic";
 import Image from "next/image";
-import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
+
+const Carousel = dynamic(() => import("react-multi-carousel"), {
+  ssr: false,
+});
 
 export default function AllBlogs() {
   return (

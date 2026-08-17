@@ -31,11 +31,11 @@ export default function TechnicalSkills() {
 
       {/* TECHNICAL SKILLS */}
       <div className="bg-main border-light/10 overflow-hidden rounded-xl border py-2.5">
-        <div className="text-light/40 border-b-light/10 border-b px-4 py-2.5 font-mono text-[11px]">
+        <div className="text-light/55 border-b-light/10 border-b px-4 py-2.5 font-mono text-[11px]">
           package.json
         </div>
 
-        <div className="text-light/40 px-4 py-4 font-mono text-sm">{"{"}</div>
+        <div className="text-light/55 px-4 py-4 font-mono text-sm">{"{"}</div>
 
         <GridContainer styles="md:grid md:grid-cols-2 gap-4! px-4">
           {visibleSkills?.map((skill, index) => (
@@ -43,7 +43,7 @@ export default function TechnicalSkills() {
           ))}
         </GridContainer>
 
-        <div className="text-light/40 px-4 pt-4 pb-2.5 font-mono text-sm">
+        <div className="text-light/55 px-4 pt-4 pb-2.5 font-mono text-sm">
           {"}"}
         </div>
       </div>

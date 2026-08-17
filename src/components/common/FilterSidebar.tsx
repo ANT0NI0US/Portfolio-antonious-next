@@ -24,7 +24,7 @@ function FilterGroup({
 }: FilterGroupProps) {
   return (
     <div className="border-light/5 border-b p-3 last:border-b-0">
-      <p className="text-light/40 mb-2 px-1 font-mono text-xs tracking-wider uppercase">
+      <p className="text-light/55 mb-2 px-1 font-mono text-xs tracking-wider uppercase">
         {title}
       </p>
       <ul className="flex flex-col gap-0.5" role="group" aria-label={ariaLabel}>
@@ -71,7 +71,7 @@ export default function FilterSidebar({ groups }: FilterSidebarProps) {
     .join(" / ");
 
   return (
-    <aside className="w-full shrink-0 lg:sticky lg:top-24 lg:w-[220px] lg:self-start">
+    <aside className="w-full shrink-0 lg:sticky lg:top-24 lg:w-55 lg:self-start">
       {/* DESKTOP SIDEBAR */}
       <div className="bg-secondary border-light/10 hidden overflow-hidden rounded-xl border lg:block">
         <div className="bg-main/60 border-light/10 text-primary/70 border-b px-4 py-3 font-mono text-xs tracking-widest uppercase">

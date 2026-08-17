@@ -32,7 +32,7 @@ export default function ContactInfoCard({
         <Icon className="size-5 sm:size-6" />
       </div>
       <div className="min-w-0">
-        <p className="text-light/40 text-xs tracking-wider uppercase">
+        <p className="text-light/55 text-xs tracking-wider uppercase">
           {label}
         </p>
         <p className="text-light truncate text-xl font-semibold">{value}</p>

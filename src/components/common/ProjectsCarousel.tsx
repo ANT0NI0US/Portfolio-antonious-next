@@ -1,9 +1,14 @@
 "use client";
 
-import { carouselResponsive } from "@/data/carouselResponsive";
 import Button from "@/components/ui/Button";
-import Carousel from "react-multi-carousel";
+import { carouselResponsive } from "@/data/carouselResponsive";
+import dynamic from "next/dynamic";
+import Image from "next/image";
 import "react-multi-carousel/lib/styles.css";
+
+const Carousel = dynamic(() => import("react-multi-carousel"), {
+  ssr: false,
+});
 
 export interface CarouselProject {
   id: number;
@@ -43,15 +48,18 @@ export default function ProjectsCarousel({
       {projects.map(({ id, title, imgUrl, description }) => (
         <div
           key={id}
-          className="bg-secondary relative flex min-h-[500px] flex-col gap-3 overflow-hidden rounded-md p-4 sm:min-h-[440px] xl:min-h-[540px]"
+          className="bg-secondary relative flex min-h-125 flex-col gap-3 overflow-hidden rounded-md p-4 sm:min-h-110 xl:min-h-135"
         >
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
-            src={imgUrl}
-            loading="lazy"
-            alt={title}
-            className="h-48 w-full rounded-md object-cover"
-          />
+          <div className="relative h-48 w-full">
+            <Image
+              fill
+              sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
+              src={imgUrl}
+              loading="lazy"
+              alt={title}
+              className="rounded-md object-cover"
+            />
+          </div>
           <div className="flex flex-1 flex-col gap-2">
             <h2 className="text-primary font-bold xl:text-xl">{title}</h2>
             <p className="text-sm xl:text-lg">

@@ -19,7 +19,7 @@ export default function Certificate() {
             font="sm:ms-auto sm:w-[170px]! mt-4"
             href={href}
             target="_blank"
-            aria_label="Credential URL"
+            aria_label={`View Credential URL for ${title}`}
             variation="secondary"
           >
             Credential URL

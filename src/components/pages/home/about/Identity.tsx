@@ -26,7 +26,7 @@ export default function Identity() {
           />
         </div>
         <div className="border-light/15 relative flex-1 rounded-xl border border-dashed py-6">
-          <span className="bg-main text-light/40 absolute -top-2.5 left-3 px-2 text-[11px]">
+          <span className="bg-main text-light/55 absolute -top-2.5 left-3 px-2 text-[11px]">
             {"{ profile.webp }"}
           </span>
         </div>
