@@ -1,11 +1,11 @@
 "use client";
 
 import Button from "@/components/ui/Button";
+import CarouselArrow from "@/components/ui/CarouselArrow";
 import { blogs } from "@/data/blogs";
 import { carouselResponsive } from "@/data/carouselResponsive";
 import dynamic from "next/dynamic";
 import Image from "next/image";
-import "react-multi-carousel/lib/styles.css";
 
 const Carousel = dynamic(() => import("react-multi-carousel"), {
   ssr: false,
@@ -18,7 +18,6 @@ export default function AllBlogs() {
       infinite
       autoPlay
       autoPlaySpeed={3000}
-      arrows
       draggable
       pauseOnHover
       showDots={false}
@@ -27,6 +26,8 @@ export default function AllBlogs() {
       minimumTouchDrag={80}
       transitionDuration={1000}
       itemClass="p-2"
+      customLeftArrow={<CarouselArrow direction="left" />}
+      customRightArrow={<CarouselArrow direction="right" />}
     >
       {blogs?.map(({ title, img, description, post, date }) => (
         <div

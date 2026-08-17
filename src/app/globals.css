@@ -289,9 +289,40 @@
   }
 }
 
-@font-face {
-  font-family: "revicons";
-  font-display: swap;
-  src: url("../../node_modules/react-multi-carousel/lib/revicons.woff")
-    format("woff");
+/* react-multi-carousel's own layout rules, copied in directly instead of
+   importing its full stylesheet. We render our own CarouselArrow buttons
+   and never use its default arrows/dots, so this skips the arrow/dot CSS
+   and — most importantly — the "revicons" icon-font @font-face it ships,
+   which was showing up as a slow entry in the critical request chain. */
+.react-multi-carousel-list {
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+}
+.react-multi-carousel-track {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+  will-change: transform, transition;
+}
+.react-multi-carousel-item {
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+}
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  .react-multi-carousel-item {
+    flex-shrink: 0 !important;
+  }
+  .react-multi-carousel-track {
+    overflow: visible !important;
+  }
+}
+[dir="rtl"].react-multi-carousel-list {
+  direction: rtl;
 }

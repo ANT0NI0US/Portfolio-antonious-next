@@ -42,14 +42,16 @@ export default function ProjectCard({ project }: ProjectCardProps) {
         aria-label={`View details about ${title}`}
         title={`View details about ${title}`}
       >
-        <Image
-          fill
-          sizes="(min-width: 640px) 300px, 100vw"
-          loading="lazy"
-          src={imgUrl}
-          alt={title}
-          className="h-full w-full rounded-2xl object-cover object-center transition-transform duration-500 group-hover:scale-110"
-        />
+        <div className="relative block h-full w-full transition-transform duration-500 group-hover:scale-110">
+          <Image
+            fill
+            sizes="(min-width: 640px) 300px, 100vw"
+            loading="lazy"
+            src={imgUrl}
+            alt={title}
+            className="rounded-2xl object-cover object-center"
+          />
+        </div>
 
         <span className="bg-main/80 text-primary absolute top-3 left-3 rounded-full px-3 py-1 text-xs font-semibold">
           {badge}

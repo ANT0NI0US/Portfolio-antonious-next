@@ -1,10 +1,10 @@
 "use client";
 
+import CarouselArrow from "@/components/ui/CarouselArrow";
 import { allTestimonials } from "@/data/allTestimonials";
 import { carouselResponsive } from "@/data/carouselResponsive";
 import { QuoteIcon } from "@/icons";
 import dynamic from "next/dynamic";
-import "react-multi-carousel/lib/styles.css";
 import TestimonialsDetailsModal from "./TestimonialsDetailsModal";
 
 const Carousel = dynamic(() => import("react-multi-carousel"), {
@@ -24,7 +24,6 @@ export default function AllTestimonials() {
       infinite
       autoPlay
       autoPlaySpeed={3000}
-      arrows
       draggable
       pauseOnHover
       showDots={false}
@@ -33,6 +32,8 @@ export default function AllTestimonials() {
       minimumTouchDrag={80}
       transitionDuration={1000}
       itemClass="p-2"
+      customLeftArrow={<CarouselArrow direction="left" />}
+      customRightArrow={<CarouselArrow direction="right" />}
     >
       {allTestimonials?.map(
         ({ publisher, fullDescription, position, at }, index) => {

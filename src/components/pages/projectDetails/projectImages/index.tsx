@@ -1,13 +1,13 @@
 "use client";
 
 import SectionDetailsHead from "@/components/common/SectionDetailsHead";
+import CarouselArrow from "@/components/ui/CarouselArrow";
 import { carouselResponsive } from "@/data/carouselResponsive";
 import { ProjectData } from "@/data/projects";
 import dynamic from "next/dynamic";
-import { useState } from "react";
-import "react-multi-carousel/lib/styles.css";
-import ProjectImageModal from "./ProjectImageModal";
 import Image from "next/image";
+import { useState } from "react";
+import ProjectImageModal from "./ProjectImageModal";
 
 const Carousel = dynamic(() => import("react-multi-carousel"), {
   ssr: false,
@@ -43,7 +43,6 @@ export default function ProjectImages({
             infinite
             autoPlay
             autoPlaySpeed={3000}
-            arrows
             draggable
             pauseOnHover
             showDots={false}
@@ -52,6 +51,8 @@ export default function ProjectImages({
             minimumTouchDrag={80}
             transitionDuration={1000}
             itemClass="p-2"
+            customLeftArrow={<CarouselArrow direction="left" />}
+            customRightArrow={<CarouselArrow direction="right" />}
           >
             {images.map(({ src, alt }, index) => (
               <div key={alt} className="flex flex-col gap-1">
