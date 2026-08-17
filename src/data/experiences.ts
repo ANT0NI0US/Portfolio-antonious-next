@@ -1,0 +1,247 @@
+import { creationProjects } from "./creationProjects";
+import { smartGateProjects } from "./smartGateProjects";
+import type { ProjectData } from "./projects";
+
+export interface ExperienceData {
+  id: number;
+  title: string;
+  companyLogo: string;
+  jobTitle: string;
+  year: string;
+  location: string;
+  employmentType: string;
+  employmentMode: string;
+  summary: string;
+  keyAchievements: string[];
+  coreResponsibilities: string[];
+  softSkills: string[];
+  tools: string[];
+  workingWith: string[];
+  techHighlights: string[];
+  deploymentTools: string[];
+  projects: ProjectData[];
+}
+
+export const TAG_CONFIGS = {
+  teamCollaboration: {
+    label: "Team",
+    title: "Team Collaboration",
+    pillStyle: "border-blue-400/30 bg-blue-400/10 text-blue-200",
+    dotColor: "bg-blue-400",
+  },
+  techHighlights: {
+    label: "Stack",
+    title: "Tech Highlights",
+    pillStyle: "border-primary/30 bg-primary/10 text-primary",
+    dotColor: "bg-primary",
+  },
+  deploymentTools: {
+    label: "DevOps",
+    title: "Deployment Tools",
+    pillStyle: "border-emerald-400/30 bg-emerald-400/10 text-emerald-200",
+    dotColor: "bg-emerald-400",
+  },
+  softSkills: {
+    label: "Growth",
+    title: "Soft Skills",
+    pillStyle: "border-purple-400/30 bg-purple-400/10 text-purple-200",
+    dotColor: "bg-purple-400",
+  },
+  tools: {
+    label: "Full Toolkit",
+    title: "Tools & Technologies",
+    pillStyle:
+      "border-white/10 bg-white/5 text-light/80 hover:border-primary/40 hover:bg-primary/10 hover:text-primary",
+    dotColor: "bg-white/30",
+  },
+};
+
+export const experiences: ExperienceData[] = [
+  {
+    id: 2,
+    title: "Crēation LLC",
+    companyLogo: "https://i.ibb.co/kVRW5dVx/Creation-Logo.jpg",
+    jobTitle: "Mid Level Frontend Developer",
+    year: "Mar 2025 - Present",
+    location: "Cairo, Egypt",
+    employmentType: "Full-time",
+    employmentMode: "On-site",
+    summary:
+      "Joined crēation LLC as a Mid-Level Frontend Developer, where I’ve significantly expanded my skill set in managing and refactoring legacy codebases, mastering Fabric.js for dynamic canvas features, and collaborating closely with the team to drive effective solutions. This role marked a key milestone in my career by elevating both my technical capabilities and communication within cross-functional teams.",
+    keyAchievements: [
+      "Boosted user satisfaction by 40% via polished UX implementations.",
+      "Cut development time by 20% by building reusable components/templates.",
+      "Delivered full bilingual support (Arabic/English) via i18n, covering 100% of UI strings.",
+      "Implemented SEO best practices resulting in improved search rankings for client websites",
+    ],
+    coreResponsibilities: [
+      "Developed interactive web apps with React.js, JavaScript (ES6), and HTML5/CSS3.",
+      "Converting UI/UX designs into interactive, responsive, and accessible interfaces.",
+      "Designed and implemented responsive layouts for seamless cross-device experiences.",
+      "Managing state efficiently using Redux Toolkit.",
+      "Set up Github CI/CD pipelines and managed code using Git for smooth deployment.",
+      "Adhering to best coding practices by writing clean, maintainable code.",
+      "Delivering high-quality, well-tested code that meets client expectations and requirements.",
+      "Continuously improving the applications I work on.",
+    ],
+    softSkills: [
+      "Communication",
+      "Willingness to Learn",
+      "Active Listening",
+      "Attention to Detail",
+      "Multitasking Skills",
+      "Perspective Sharing",
+    ],
+    tools: [
+      "React",
+      "Next.js",
+      "Javascript",
+      "ECMAScript",
+      "Typescript",
+      "Tailwind CSS",
+      "Fabric.js",
+      "HTML5",
+      "CSS3",
+      "Zod",
+      "Yup",
+      "Framer Motion",
+      "i18n",
+      "React Hook Form",
+      "Swiper",
+      "Redux",
+      "Redux Toolkit Query",
+      "Performance Optimization",
+      "SEO",
+      "Debugging",
+      "Code Refactoring",
+      "Clean Code Principles",
+      "Modular Architecture",
+      "Reusable Components",
+      "Problem Solving",
+      "Supabase",
+      "Responsive Design",
+      "UI/UX Principles",
+      "Code Review",
+      "Postman",
+      "NPM",
+      "VS Code",
+      "Cursor",
+    ],
+    workingWith: ["Company Owner", "Backend Developers (Laravel, PHP)"],
+    techHighlights: [
+      "React",
+      "Next.js",
+      "Redux",
+      "Tailwind CSS",
+      "Fabric.js",
+      "i18n",
+      "Performance Optimization",
+      "SEO",
+      "Code Refactoring",
+    ],
+    deploymentTools: ["GitHub CI/CD", "Vercel", "Digital Ocean"],
+    projects: creationProjects,
+  },
+  {
+    id: 1,
+    title: "Smart Gate",
+    companyLogo: "https://i.ibb.co/zTZt1RZr/Smartgate-Logo.jpg",
+    jobTitle: "Junior Frontend Developer",
+    year: "Oct 2023 - Feb 2025",
+    location: "Cairo, Egypt",
+    employmentType: "Full-time",
+    employmentMode: "On-site",
+    summary:
+      "Contributed to the full lifecycle of high-impact web applications, focusing on performance, scalability, and a seamless user experience. Delivered value across multiple domains by building robust interfaces and managing complex frontend architecture using modern stacks.",
+    keyAchievements: [
+      "Delivered 8+ successful web applications",
+      "Reduced page load time by 30% through performance optimizations.",
+      "Boosted user satisfaction by 25% via polished UX implementations.",
+      "Cut development time by 20% by building reusable components/templates.",
+      "Reduced deployment errors by 15% with improved CI/CD pipelines.",
+      "Delivered full bilingual support (Arabic/English) via i18n, covering 100% of UI strings.",
+    ],
+    coreResponsibilities: [
+      "Developed interactive web apps with React.js, JavaScript (ES6), and HTML5/CSS3.",
+      "Designed and implemented responsive layouts for seamless cross-device experiences.",
+      "Collaborated with UX/UI designers to translate wireframes into working features.",
+      "Used Redux, React Query, and Chakra UI / Tailwind CSS / Material UI for scalable frontend architecture.",
+      "Set up GitLab CI/CD pipelines and managed code using Git for smooth deployment.",
+      "Collaborated with clients to understand project requirements.",
+    ],
+    softSkills: [
+      "Teamwork",
+      "Communication",
+      "Time Management",
+      "Willingness to Learn",
+      "Negotiation",
+      "Active Listening",
+      "Attention to Detail",
+      "Multitasking",
+    ],
+    tools: [
+      "React",
+      "Next",
+      "Javascript",
+      "ECMAScript",
+      "Typescript",
+      "Tailwind CSS",
+      "HTML5",
+      "CSS3",
+      "i18n",
+      "React Hook Form",
+      "framer-motion",
+      "Material UI",
+      "Chakra UI",
+      "Tanstack/react-query",
+      "Redux",
+      "Axios",
+      "Performance Optimization",
+      "Problem Solving",
+      "SEO",
+      "Debugging",
+      "Code Refactoring",
+      "Clean Code Principles",
+      "Modular Architecture",
+      "Reusable Components",
+      "Responsive Design",
+      "UI/UX Principles",
+      "Figma (reading & interpreting designs)",
+      "Code Review",
+      "Postman",
+      "NPM",
+      "Vite",
+      "VS Code",
+      "JSON",
+      "react-apexcharts",
+      "react-icons",
+      "react-multi-carousel",
+      "react-select",
+      "react-toastify",
+      "reactflow",
+      "react-quill",
+      "react-datepicker",
+      "react-copy-to-clipboard",
+    ],
+    workingWith: [
+      "Frontend Developers",
+      "Backend Developers (.NET, SQL)",
+      "UI/UX Designers (Figma)",
+      "Project Manager",
+      "Data Analysts",
+    ],
+    techHighlights: [
+      "React",
+      "Redux",
+      "Tailwind CSS",
+      "Tanstack/react-query",
+      "react-quill",
+      "i18n",
+      "Performance Optimization",
+      "SEO",
+      "Code Refactoring",
+    ],
+    deploymentTools: ["GitLab CI/CD"],
+    projects: smartGateProjects,
+  },
+];

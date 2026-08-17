@@ -1,26 +1,288 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+@theme {
+  --animate-text-effect: move 4s linear infinite;
+  --animate-bounce-arrow: bounce-arrow 1.2s infinite;
+  --animate-glowing-text: glow 1.5s infinite ease-in-out;
+  --animate-rotate: rotateCard 5s
+    linear(
+      0 0%,
+      0.22 2.1%,
+      0.86 6.5%,
+      1.11 8.6%,
+      1.3 10.7%,
+      1.35 11.8%,
+      1.37 12.9%,
+      1.37 13.7%,
+      1.36 14.5%,
+      1.32 16.2%,
+      1.03 21.8%,
+      0.94 24%,
+      0.89 25.9%,
+      0.88 26.85%,
+      0.87 27.8%,
+      0.87 29.25%,
+      0.88 30.7%,
+      0.91 32.4%,
+      0.98 36.4%,
+      1.01 38.3%,
+      1.04 40.5%,
+      1.05 42.7%,
+      1.05 44.1%,
+      1.04 45.7%,
+      1 53.3%,
+      0.99 55.4%,
+      0.98 57.5%,
+      0.99 60.7%,
+      1 68.1%,
+      1.01 72.2%,
+      1 86.7%,
+      1 100%
+    )
+    infinite;
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+  --height-screen: 100dvh;
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+  --color-main: #151515;
+  --color-primary: #ffc83d;
+  --color-secondary: #001639;
+  --color-light: #daf3ff;
+  --color-error: #ff333d;
+
+  --breakpoint-xs: 350px;
+
+  @keyframes move {
+    0%,
+    100% {
+      left: 0;
+    }
+    50% {
+      left: calc(100% - 60px);
+    }
+  }
+  @keyframes rotateCard {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(1turn);
+    }
+  }
+  @keyframes bounce-arrow {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(10px);
+    }
+  }
+  @keyframes glow {
+    0% {
+      transform: scale(1);
+      opacity: 0.8;
+    }
+    50% {
+      transform: scale(1.2);
+      opacity: 1;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 0.8;
+    }
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@utility container {
+  margin-inline: auto;
+  padding-inline: 1rem;
+  width: 100%;
+  max-width: 100%;
+
+  @media (width >= theme(--breakpoint-sm)) {
+    max-width: 640px;
+  }
+  @media (width >= theme(--breakpoint-md)) {
+    max-width: 768px;
+  }
+  @media (width >= theme(--breakpoint-lg)) {
+    max-width: 1024px;
+    padding-inline: 4rem;
+  }
+  @media (width >= theme(--breakpoint-xl)) {
+    max-width: 1280px;
+    padding-inline: 5rem;
+  }
+  @media (width >= theme(--breakpoint-2xl)) {
+    max-width: 1536px;
+    padding-inline: 6rem;
+  }
+}
+
+/*
+  The default border color has changed to `currentcolor` in Tailwind CSS v4,
+  so we've added these compatibility styles to make sure everything still
+  looks the same as it did with Tailwind CSS v3.
+
+  If we ever want to remove these styles, we need to add an explicit border
+  color utility to any element that depends on these defaults.
+*/
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentcolor);
+  }
+
+  body {
+    @apply text-light bg-main;
+    font-family: "Montserrat", sans-serif;
+    scroll-behavior: smooth;
+  }
+}
+
+@utility input {
+  @apply w-full p-2.5 transition-all duration-300 outline-none placeholder:text-sm disabled:cursor-not-allowed disabled:border-none;
+  &:-webkit-autofill {
+    -webkit-text-fill-color: #daf3ff;
+    box-shadow: 0 0 0px 1000px #151515 inset;
+    caret-color: #daf3ff;
+  }
+}
+
+@utility flexCenter {
+  @apply flex items-center justify-center;
+}
+
+@utility flexBetween {
+  @apply flex items-center justify-between;
+}
+
+@utility wave {
+  @apply absolute top-0 left-0 h-25 w-full bg-[url("https://i.ibb.co/n8mWC0HN/secondary-Wave-Color.webp")] bg-size-[1000px_100px];
+}
+@utility animate-wave-slow {
+  animation: animateWave 4s linear infinite;
+}
+@utility animate-wave-fast {
+  animation: animateWave 3s linear infinite;
+}
+@utility animate-wave02-slow {
+  animation: animateWave_02 4s linear infinite;
+}
+@utility animate-wave02-fast {
+  animation: animateWave_02 3s linear infinite;
+}
+@utility animate-marquee {
+  animation: marquee linear infinite;
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+@layer components {
+  img {
+    @apply object-cover object-center;
+  }
+  button {
+    @apply cursor-pointer;
+  }
+}
+
+.before-element::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-width: 12px;
+  border-style: solid;
+  border-color: #001639 #001639 transparent transparent;
+  left: 0;
+  bottom: -24px;
+}
+
+.after-element::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-width: 12px;
+  border-style: solid;
+  border-color: #001639 transparent transparent #001639;
+  right: 0;
+  bottom: -24px;
+}
+
+@keyframes animateWave {
+  0% {
+    background-position-x: 0px;
+  }
+  100% {
+    background-position-x: 1000px;
+  }
+}
+
+@keyframes animateWave_02 {
+  0% {
+    background-position-x: 1000px;
+  }
+  100% {
+    background-position-x: 0px;
+  }
+}
+
+/* SCROLLBAR STYLES */
+*::-webkit-scrollbar {
+  @apply w-1;
+}
+*::-webkit-scrollbar-track {
+  @apply bg-light;
+}
+*::-webkit-scrollbar-thumb {
+  @apply bg-secondary;
+}
+/* Vertical scrollbar */
+*::-webkit-scrollbar:vertical {
+  @apply w-2.5;
+}
+
+/* Horizontal scrollbar */
+*::-webkit-scrollbar:horizontal {
+  @apply h-2.5;
+}
+
+.before-content::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 60px;
+  height: 100%;
+  background-color: white;
+  animation: move 4s linear infinite;
+}
+
+@keyframes move {
+  0%,
+  100% {
+    left: 0;
+  }
+  50% {
+    left: calc(100% - 60px);
+  }
+}
+
+@font-face {
+  font-family: "revicons";
+  font-display: swap;
+  src: url("../../node_modules/react-multi-carousel/lib/revicons.woff")
+    format("woff");
 }

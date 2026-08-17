@@ -1,0 +1,17 @@
+import Icon from "@/components/ui/Icon";
+import { IconProps } from "./types";
+
+export default function DoubleArrowIcon(props: IconProps) {
+  return (
+    <Icon {...props} viewBox="0 0 16 16" fill="currentColor" stroke="none">
+      <path
+        d="M5 16V13L16 13V11L5 11L5 8H4L3.93403e-07 12L4 16H5Z"
+        fill="currentColor"
+      />
+      <path
+        d="M11 8L11 5L8.74227e-08 5L0 3L11 3V4.37112e-08L12 0L16 4L12 8H11Z"
+        fill="currentColor"
+      />
+    </Icon>
+  );
+}

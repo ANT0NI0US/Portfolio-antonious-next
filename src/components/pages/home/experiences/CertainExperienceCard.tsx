@@ -1,0 +1,51 @@
+import Button from "@/components/ui/Button";
+import { BuildingIcon, CalendarIcon, LocationIcon } from "@/icons";
+
+interface CertainExperienceCardProps {
+  experience: {
+    id: number;
+    title: string;
+    year: string;
+    location: string;
+    employmentType: string;
+    employmentMode: string;
+    summary: string;
+  };
+}
+
+export default function CertainExperienceCard({
+  experience,
+}: CertainExperienceCardProps) {
+  const { id, title, year, location, employmentType, employmentMode, summary } =
+    experience || {};
+
+  return (
+    <div className="from-main to-secondary shadow-secondary relative flex w-full flex-col gap-4 rounded-md bg-linear-to-tl from-55% to-100% p-6 shadow-md transition-all duration-300 hover:scale-[1.02] md:w-[45%]">
+      <div className="text-primary flex items-center gap-1.5 text-2xl sm:text-3xl lg:text-4xl">
+        <BuildingIcon className="size-10" />
+        <h3 className="font-semibold">{title}</h3>
+      </div>
+      <div className="flex w-full flex-col items-start justify-between gap-2 xl:flex-row xl:items-center">
+        <div className="xs:justify-end flex w-full items-center gap-1.5 self-end text-xs sm:text-sm xl:justify-start">
+          <CalendarIcon />
+          <span className="whitespace-nowrap">{year}</span>
+        </div>
+        <div className="flex w-full items-center justify-end gap-1.5 self-end text-xs sm:text-sm xl:justify-end">
+          <LocationIcon />
+          <span className="whitespace-wrap">
+            {location} • {employmentType}, {employmentMode}
+          </span>
+        </div>
+      </div>
+
+      <p className="leading-7">{summary}</p>
+      <Button
+        href={`experiences/${id}`}
+        aria_label={`Explore Experience for ${title}`}
+        font="w-[160px]! ms-auto! sm:w-[200px]!"
+      >
+        Explore Experience
+      </Button>
+    </div>
+  );
+}

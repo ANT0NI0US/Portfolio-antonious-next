@@ -1,0 +1,90 @@
+export const techSkills = [
+  {
+    title: "Frontend Libraries & Frameworks",
+    description: [
+      "React.js",
+      "Next.js",
+      "Tailwind CSS",
+      "i18n (Internationalization)",
+      "React Hook Form",
+      "Zod",
+      "Yup",
+      "Material UI",
+      "Chakra UI",
+      "Bootstrap",
+      "Styled Components",
+      "Framer Motion",
+      "SASS",
+      "PugJS",
+      "Fabric.js",
+      "react-apexcharts",
+      "react-icons",
+      "react-multi-carousel",
+      "react-select",
+      "react-toastify",
+      "reactflow",
+      "react-quill",
+      "react-datepicker",
+      "react-copy-to-clipboard",
+    ],
+  },
+  {
+    title: "Core Languages",
+    description: ["HTML5", "CSS3", "JavaScript (ES6+)", "TypeScript", "JSON"],
+  },
+  {
+    title: "State Management & Data Fetching",
+    description: [
+      "TanStack React Query",
+      "Redux",
+      "Redux Toolkit",
+      "Redux Toolkit Query",
+      "Zustand",
+      "Context API",
+      "Axios",
+      "REST APIs",
+    ],
+  },
+  {
+    title: "Optimization & Debugging",
+    description: [
+      "Performance Optimization",
+      "SEO (Search Engine Optimization)",
+      "Debugging (Chrome DevTools, React DevTools)",
+    ],
+  },
+  {
+    title: "Code Quality & Maintainability",
+    description: [
+      "Code Refactoring",
+      "Clean Code Principles",
+      "Modular Architecture",
+      "Reusable Components",
+    ],
+  },
+  {
+    title: "Backend & Database",
+    description: ["Firebase", "Supabase"],
+  },
+  {
+    title: "Design & Responsive Development",
+    description: [
+      "Responsive Design",
+      "Cross-Browser Compatibility",
+      "UI/UX Principles",
+      "Figma (reading & interpreting designs)",
+    ],
+  },
+  {
+    title: "Version Control & Collaboration",
+    description: ["Git", "GitHub", "Gitlab", "Code Review", "Postman", "NPM"],
+  },
+  {
+    title: "Deployment & Hosting",
+    description: ["Netlify", "Vercel", "Digital Ocean"],
+  },
+  {
+    title: "Tools & Environment",
+    description: ["VS Code", "Cursor"],
+  },
+];

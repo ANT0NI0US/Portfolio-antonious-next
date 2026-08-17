@@ -1,0 +1,13 @@
+import Icon from "@/components/ui/Icon";
+import { IconProps } from "./types";
+
+export default function TimeIcon(props: IconProps) {
+  return (
+    <Icon {...props}>
+      <path d="M12 6v6l1.56.78" />
+      <path d="M13.227 21.925a10 10 0 1 1 8.767-9.588" />
+      <path d="m14 18 4-4 4 4" />
+      <path d="M18 22v-8" />
+    </Icon>
+  );
+}
