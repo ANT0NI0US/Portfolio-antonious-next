@@ -15,7 +15,7 @@ const mainLinks: {
     btnType: "secondary",
   },
   {
-    to: "https://drive.google.com/file/d/1W58GmYl_eJjOZVTXC0nuiWtVgHn-FoJc/view",
+    to: "https://drive.google.com/file/d/1hquxIatiASFloPGWiaEYOXC8QLXv8-Em/view",
     icon: CvIcon,
     text: "View CV",
     target: "_blank",
