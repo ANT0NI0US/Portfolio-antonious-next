@@ -1,4 +1,5 @@
 import CursorPulse from "@/components/ui/CursorPulse";
+import TerminalChrome from "@/components/ui/TerminalChrome";
 import { getYearsOfExperience } from "@/components/utils/experience";
 import { creationProjects } from "@/data/creationProjects";
 import { personalProjects } from "@/data/projects";
@@ -24,15 +25,8 @@ const stats = [
 
 export default function StatsPanel() {
   return (
-    <div className="border-light/10 bg-secondary overflow-hidden rounded-xl border">
-      {/* TAB BAR */}
-      <div className="border-light/10 bg-main/40 flex items-center gap-2 border-b px-4 py-3">
-        <span className="bg-light/70 size-2.5 rounded-full" />
-        <span className="text-light/70 font-mono text-xs">stats.js</span>
-      </div>
-
-      {/* CODE BODY */}
-      <div className="px-5 py-6 font-mono text-[13px] leading-loose md:text-sm">
+    <TerminalChrome label="stats.js">
+      <>
         <div>
           <span className="text-light/50">const</span>{" "}
           <span className="text-accent">profile</span>{" "}
@@ -58,7 +52,7 @@ export default function StatsPanel() {
           <span className="text-light/50">{"}"}</span>
           <CursorPulse />
         </div>
-      </div>
-    </div>
+      </>
+    </TerminalChrome>
   );
 }

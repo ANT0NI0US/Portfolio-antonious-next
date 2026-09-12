@@ -1,10 +1,21 @@
-import { CheckIcon, ContactIcon, OverViewIcon, ProjectIcon } from "@/icons";
+import {
+  CheckIcon,
+  ContactIcon,
+  OverViewIcon,
+  ProjectIcon,
+  UserCheckIcon,
+} from "@/icons";
 
 export const links = [
   {
     icon: OverViewIcon,
     path: "/",
     text: "Overview",
+  },
+  {
+    icon: UserCheckIcon,
+    path: "/about",
+    text: "About",
   },
   {
     icon: CheckIcon,

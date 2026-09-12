@@ -197,6 +197,22 @@
   }
 }
 
+@utility animate-ring-pulse {
+  animation: ringPulse 3s ease-in-out infinite;
+}
+
+@keyframes ringPulse {
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 0.6;
+  }
+  50% {
+    transform: scale(1.12);
+    opacity: 0.15;
+  }
+}
+
 @layer components {
   img {
     @apply object-cover object-center;
