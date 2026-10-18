@@ -167,7 +167,7 @@ export const smartGateProjects: ProjectData[] = [
     description:
       "This is what I have done since a month after joining Smart Gate company, and I am not allowed to use the source code according to the current contract between us. This project allows any user, whether a company, organization, or any website, to integrate a chat feature on their platform. This chat can contain any desired content, such as messages or the addition of workdays, with the ability to specify the working hours. Additionally, users can define multiple pathways to enable them to choose the desired route. The platform also allows the creation of forms through which users can be asked various questions, and the collected data is recorded according to the preferences of the chat's creator. Furthermore, users can ask and respond to questions, add images for display, and download any data as per the preferences of the individual who built the interface.",
     category: "smartGate",
-    stack: ["React.js", "JavaScript", "Tailwind CSS"],
+    stack: ["React.js", "JavaScript", "Material UI"],
     languages: ["Arabic", "English"],
     imgUrl: "https://i.ibb.co/gthm3Hb/ChatBot.webp",
     // url: "https://chatbotv2.mygatein.com/#/login",
@@ -186,7 +186,7 @@ export const smartGateProjects: ProjectData[] = [
       "Tackled the challenge of adapting to unfamiliar technologies and incorporated them seamlessly into production.",
     ],
     responsibilities: [
-      "Led the development of the chat interface and builder panel using React (Vite) and Tailwind CSS for high responsiveness and speed.",
+      "Led the development of the chat interface and builder panel using React (Vite) and Material UI for high responsiveness and speed.",
       "Implemented an interactive flow editor and rich content editor using unfamiliar yet powerful libraries like React Flow and React Quill, adapting quickly to their architecture and limitations.",
       "Built the interactive flow builder, allowing conditional branching, user input handling, and previewing chat logic in real-time.",
       "Integrated features to define business hours and active days, dynamically impacting bot availability.",
@@ -227,9 +227,9 @@ export const smartGateProjects: ProjectData[] = [
         alt: "Redux",
       },
       {
-        src: "https://i.ibb.co/WyVJpw0/tailwind.png",
-        url: "https://tailwindcss.com/",
-        alt: "Tailwind CSS",
+        src: "https://i.ibb.co/WyVJpw0/material-ui.png",
+        url: "https://mui.com/",
+        alt: "Material UI",
       },
       {
         src: "https://i.ibb.co/phvgSzx/react-router-dom.webp",

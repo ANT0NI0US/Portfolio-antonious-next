@@ -8,7 +8,7 @@ export const Certifications = [
   },
   {
     id: 2,
-    date: "Aug 2025 - Aug 2025",
+    date: "Aug 2025 - Sep 2025",
     place: "Udemy",
     title: "React & TypeScript - The Practical Guide",
     href: "https://www.udemy.com/certificate/UC-e82b621c-6bda-496f-9c6d-0d418a403040/",
